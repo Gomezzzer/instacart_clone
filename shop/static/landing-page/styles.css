@@ -91,7 +91,7 @@ body {
 
 .hero h1 {
     font-size: 2rem;
-    margin-top: -14rem;
+    margin-top: -23rem;
     margin-bottom: 20px;
 }
 
@@ -123,11 +123,11 @@ body {
     gap: 20px;
     justify-content: center;
     margin: 30px 20px;
-    margin-top: -25rem;
+    margin-top: -35rem;
 }
 
 .product {
-    width: calc(50% - 20px); /* Two per row */
+    width: calc(50% - 20px); /* Two per row on larger screens */
     background-color: #f8f9fa; /* Light grey */
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -143,8 +143,9 @@ body {
 }
 
 .product img {
-    width: 100%;
+    width: 50%;
     height: auto;
+    margin-top: 1rem;
 }
 
 .product-details {
@@ -211,8 +212,10 @@ body {
     }
 
     .product {
-        width: calc(100% - 20px); /* Single column on small screens */
+        width: calc(50% - 20px); /* Two per row on mobile */
     }
 
 }
+
+
 
