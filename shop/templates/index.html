@@ -39,56 +39,77 @@
         </div>
     </section>
 
-    <section class="product-list">
-        <div class="product">
-            <div class="add-icon">+</div>
-            <img src="{% static 'landing-page/images/pear.png' %}" alt="Product 1" class="product-image">
-            <div class="product-details">
-                <h3>pear</h3>
-                <p>$10.99</p>
-            </div>
-        </div>
-        <div class="product">
-            <div class="add-icon">+</div>
-            <img src="{% static 'landing-page/images/chokeberry.png' %}" alt="Product 2" class="product-image">
-            <div class="product-details">
-                <h3>chokeberry</h3>
-                <p>$15.49</p>
-            </div>
-        </div>
-        <div class="product">
-            <div class="add-icon">+</div>
-            <img src="{% static 'landing-page/images/strawberry.png' %}" alt="Product 3" class="product-image">
-            <div class="product-details">
-                <h3>strawberry</h3>
-                <p>$8.75</p>
-            </div>
-        </div>
-        <div class="product">
-            <div class="add-icon">+</div>
-            <img src="{% static 'landing-page/images/broccoli.png' %}" alt="Product 4" class="product-image">
-            <div class="product-details">
-                <h3>broccoli</h3>
-                <p>$12.00</p>
-            </div>
-        </div>
-        <div class="product">
-            <div class="add-icon">+</div>
-            <img src="{% static 'landing-page/images/pear.png' %}" alt="Product 4" class="product-image">
-            <div class="product-details">
-                <h3>Product Name</h3>
-                <p>$12.00</p>
-            </div>
-        </div>
-        <div class="product">
-            <div class="add-icon">+</div>
-            <img src="{% static 'landing-page/images/pear.png' %}" alt="Product 4" class="product-image">
-            <div class="product-details">
-                <h3>Product Name</h3>
-                <p>$12.00</p>
-            </div>
-        </div>
+    <!-- Full-Width Image Section -->
+    <section class="full-width-image-section">
+        <img src="{% static 'landing-page/images/produce.jpg' %}" alt="Showcase Image" class="full-width-image">
     </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel">
+        <h2>Products on sale</h2>
+        <div class="carousel-container">
+            <!-- Product 1 -->
+            <div class="product">
+                <div class="add-icon">+</div>
+                <img src="{% static 'landing-page/images/chokeberry.png' %}" alt="Product 1" class="product-image">
+                <div class="product-details">
+                    <h3>pear</h3>
+                    <p>$10.99</p>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <div class="add-icon">+</div>
+                <img src="{% static 'landing-page/images/pear.png' %}" alt="Product 2" class="product-image">
+                <div class="product-details">
+                    <h3>chokeberry</h3>
+                    <p>$15.49</p>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+                <div class="add-icon">+</div>
+                <img src="{% static 'landing-page/images/strawberry.png' %}" alt="Product 3" class="product-image">
+                <div class="product-details">
+                    <h3>strawberry</h3>
+                    <p>$8.75</p>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product">
+                <div class="add-icon">+</div>
+                <img src="{% static 'landing-page/images/broccoli.png' %}" alt="Product 4" class="product-image">
+                <div class="product-details">
+                    <h3>broccoli</h3>
+                    <p>$12.00</p>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product">
+                <div class="add-icon">+</div>
+                <img src="{% static 'landing-page/images/pear.png' %}" alt="Product 5" class="product-image">
+                <div class="product-details">
+                    <h3>pear</h3>
+                    <p>$10.99</p>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="product">
+                <div class="add-icon">+</div>
+                <img src="{% static 'landing-page/images/pear.png' %}" alt="Product 6" class="product-image">
+                <div class="product-details">
+                    <h3>pear</h3>
+                    <p>$10.99</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Carousel Navigation Arrows -->
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+    </section>
+    
+    
 
     <script src="{% static 'landing-page/scripts.js' %}"></script>
 </body>

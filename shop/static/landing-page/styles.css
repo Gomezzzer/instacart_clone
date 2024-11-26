@@ -87,6 +87,7 @@ body {
     color: #218838;
     padding: 20px;
     margin-top: 60px; /* Offset for fixed navbar */
+    margin-bottom: -37rem;
 }
 
 .hero h1 {
@@ -116,34 +117,54 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Product List Section */
-.product-list {
+/* Full-Width Image Section */
+.full-width-image-section {
+    margin: 2rem 0; /* Add spacing above and below the section */
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-    margin: 30px 20px;
-    margin-top: -35rem;
+    align-items: center;
+}
+
+.full-width-image {
+    width: 95%; /* Almost full width with some margin on sides */
+    max-width: 1200px; /* Optional: limit max width for larger screens */
+    height: 300px; /* Set a specific height */
+    border-radius: 20px; /* Smooth rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+
+/* Carousel Section */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
 .product {
-    width: calc(50% - 20px); /* Two per row on larger screens */
-    background-color: #f8f9fa; /* Light grey */
+    width: 300px;  /* Set a fixed width for each product */
+    background-color: #f8f9fa;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.product:hover {
-    transform: scale(1.05);
+    margin-right: 20px;
+    flex-shrink: 0;  /* Prevent products from shrinking */
 }
 
 .product img {
-    width: 50%;
+    width: 100%;
     height: auto;
     margin-top: 1rem;
 }
@@ -184,12 +205,41 @@ body {
     background-color: #218838;
 }
 
+/* Carousel Navigation Buttons */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: -3px;
+}
+
+.next-btn {
+    right: 26px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .menu-icon {
         display: flex;
-        margin-right: 2rem;
+        margin-right: 3rem;
     }
 
     .nav-links {
@@ -211,11 +261,30 @@ body {
         margin: 10px 0;
     }
 
+    .full-width-image {
+        width: 90%; /* Slightly smaller width on mobile for better fit */
+        height: 200px; /* Reduce height for smaller screens */
+        border-radius: 15px; /* Slightly smaller border radius for a balanced look */
+        margin-left: .8rem;
+    }
+
     .product {
-        width: calc(50% - 20px); /* Two per row on mobile */
+        width: 45%;  /* Two items per row on mobile */
+        margin-top: 2rem;
     }
 
 }
 
+@media screen and (max-width: 480px) {
+    .product {
+        width: 32%;  /* One item per row on very small screens */
+        margin-top: 2rem;
+    }
 
+    .full-width-image {
+        width: 93%; /* Utilize the full screen width on very small devices */
+        height: 150px; /* Further reduce height for very small screens */
+        border-radius: 10px; /* Smaller radius to match tighter spaces */
+    }
 
+}
