@@ -23,10 +23,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     padding: 10px 20px;
     top: 0;
     z-index: 1000;
+    margin-right: 1rem;
 }
 
 .navbar-container {
@@ -139,7 +140,7 @@ body {
 /* Carousel Section */
 .carousel {
     position: relative;
-    width: 100%;
+    width: 96%;
     max-width: 1200px;
     margin: 30px auto;
     overflow: hidden;
@@ -165,7 +166,7 @@ body {
 }
 
 .product img {
-    width: 100%;
+    width: 68%;
     height: auto;
     margin-top: 1rem;
 }
@@ -237,7 +238,7 @@ body {
 .bottom-nav {
     position: sticky;
     bottom: 0;
-    width: 102%;
+    width: 100%;
     background-color: #ffffff; /* White background */
     border-top: 1px solid #e0e0e0; /* Light grey border for separation */
     display: flex;
@@ -246,7 +247,7 @@ body {
     padding: 0.5rem 0;
     z-index: 1000; /* Ensure it stays on top */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow above */
-    margin-top: 7rem;
+    margin-top: 9rem;
 }
 
 .nav-item {
@@ -404,7 +405,7 @@ body {
 @media screen and (max-width: 768px) {
     .menu-icon {
         display: flex;
-        margin-right: 2rem;
+        margin-right: .5rem;
     }
 
     .nav-links {
@@ -430,7 +431,7 @@ body {
         width: 90%; /* Slightly smaller width on mobile for better fit */
         height: 200px; /* Reduce height for smaller screens */
         border-radius: 15px; /* Slightly smaller border radius for a balanced look */
-        margin-left: 1.2rem;
+        margin-left: -3%;
     }
 
     .product {
