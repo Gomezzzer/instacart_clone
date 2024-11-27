@@ -25,7 +25,6 @@ body {
     align-items: center;
     width: 100%;
     padding: 10px 20px;
-    position: fixed;
     top: 0;
     z-index: 1000;
 }
@@ -35,7 +34,9 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    position: static; /* Ensure it's not sticky or fixed */
     max-width: 1200px;
+    z-index: 1; /* Ensure it doesn't overlap unintentionally */
 }
 
 .logo a {
@@ -92,7 +93,7 @@ body {
 
 .hero h1 {
     font-size: 2rem;
-    margin-top: -23rem;
+    margin-top: -26rem;
     margin-bottom: 20px;
 }
 
@@ -232,6 +233,170 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Bottom Navigation */
+.bottom-nav {
+    position: sticky;
+    bottom: 0;
+    width: 102%;
+    background-color: #ffffff; /* White background */
+    border-top: 1px solid #e0e0e0; /* Light grey border for separation */
+    display: flex;
+    justify-content: space-around; /* Evenly distribute nav items */
+    align-items: center;
+    padding: 0.5rem 0;
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow above */
+    margin-top: 7rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #333; /* Default text color */
+    font-size: 0.85rem; /* Slightly smaller text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item:hover {
+    color: #2ecc71; /* Highlight color (green) on hover */
+}
+
+.nav-icon {
+    width: 24px; /* Icon size */
+    height: 24px;
+    margin-bottom: 0.25rem; /* Space between icon and label */
+}
+
+/* Buy It Again Section */
+.buy-again {
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+.buy-again h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Carousel Container */
+.buy-again-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    margin: 0 auto;
+}
+
+/* Individual Product Cards */
+.buy-again-product {
+    flex: 0 0 auto;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: 180px; /* Fixed width for consistent sizing */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buy-again-product .add-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    background: #2ecc71;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.buy-again-product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.buy-again-product .product-details {
+    text-align: center;
+}
+
+.buy-again-product .product-details h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+.buy-again-product .product-details p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Carousel Buttons */
+.buy-again-prev-btn,
+.buy-again-next-btn {
+    background: #2ecc71;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.buy-again-prev-btn {
+    left: 10px;
+}
+
+.buy-again-next-btn {
+    right: 10px;
+}
+
+/* Mobile-Friendly Styling */
+@media (max-width: 768px) {
+    .buy-again-container {
+        gap: 10px;
+    }
+
+    .buy-again-product {
+        width: 150px; /* Slightly smaller for mobile */
+        padding: 8px;
+    }
+
+    .buy-again-product .add-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 1.2rem;
+    }
+
+    .buy-again h2 {
+        font-size: 1.3rem;
+    }
+
+    .buy-again-prev-btn,
+    .buy-again-next-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+}
+
 
 
 
@@ -239,7 +404,7 @@ body {
 @media screen and (max-width: 768px) {
     .menu-icon {
         display: flex;
-        margin-right: 3rem;
+        margin-right: 2rem;
     }
 
     .nav-links {
@@ -247,7 +412,7 @@ body {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 63px;
+        right: 17px;
         background-color: #28a745;
         padding: 10px;
         border-radius: 5px;
@@ -265,12 +430,51 @@ body {
         width: 90%; /* Slightly smaller width on mobile for better fit */
         height: 200px; /* Reduce height for smaller screens */
         border-radius: 15px; /* Slightly smaller border radius for a balanced look */
-        margin-left: .8rem;
+        margin-left: 1.2rem;
     }
 
     .product {
         width: 45%;  /* Two items per row on mobile */
         margin-top: 2rem;
+    }
+
+    .bottom-nav {
+        padding: 0.4rem 0; /* Slightly reduced padding for smaller screens */
+    }
+
+    .nav-item {
+        font-size: 0.7rem; /* Further reduce text size on smaller devices */
+    }
+
+    .nav-icon {
+        width: 18px;
+        height: 18px; /* Smaller icons for tighter spaces */
+    }
+
+    .buy-again-container {
+        gap: 10px;
+    }
+
+    .buy-again-product {
+        width: 150px; /* Slightly smaller for mobile */
+        padding: 8px;
+    }
+
+    .buy-again-product .add-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 1.2rem;
+    }
+
+    .buy-again h2 {
+        font-size: 1.3rem;
+    }
+
+    .buy-again-prev-btn,
+    .buy-again-next-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
     }
 
 }
@@ -279,12 +483,24 @@ body {
     .product {
         width: 32%;  /* One item per row on very small screens */
         margin-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     .full-width-image {
         width: 93%; /* Utilize the full screen width on very small devices */
         height: 150px; /* Further reduce height for very small screens */
         border-radius: 10px; /* Smaller radius to match tighter spaces */
+        margin-top: -6rem;
     }
+
+    .nav-item {
+        font-size: 0.65rem; /* Even smaller text for very small screens */
+    }
+
+    .nav-icon {
+        width: 16px;
+        height: 16px; /* Further reduced icon size for small screens */
+    }
+
 
 }
