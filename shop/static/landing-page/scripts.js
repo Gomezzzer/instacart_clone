@@ -71,6 +71,17 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
+// Enable smooth scrolling for horizontal carousel
+const iconCarousel = document.querySelector('.icon-carousel');
+
+iconCarousel.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    iconCarousel.scrollBy({
+        left: e.deltaY > 0 ? 100 : -100, // Scroll left or right
+        behavior: 'smooth',
+    });
+});
+
 
 
 

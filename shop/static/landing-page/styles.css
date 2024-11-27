@@ -136,6 +136,49 @@ body {
     object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
+.icon-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    padding: 1rem 0;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-bottom: 1px solid #ddd;
+}
+
+.carousel-container2 {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.icon-item {
+    flex: 0 0 auto; /* Prevent icons from shrinking */
+    text-align: center;
+}
+
+.icon-item img {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px;
+    border-radius: 50%; /* Make the icons circular */
+    border: 2px solid #ddd; /* Optional: border around the icons */
+    padding: 5px; /* Add some padding for spacing */
+    background-color: white; /* Background color for icons */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.icon-item img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    border-color: #ff9900; /* Highlight color on hover */
+}
+
+.icon-item p {
+    margin-top: 0.5rem;
+    font-size: 0.85rem; /* Adjust the text size */
+    color: #333;
+}
+
+
 
 /* Carousel Section */
 .carousel {
@@ -431,7 +474,7 @@ body {
         width: 90%; /* Slightly smaller width on mobile for better fit */
         height: 200px; /* Reduce height for smaller screens */
         border-radius: 15px; /* Slightly smaller border radius for a balanced look */
-        margin-left: -3%;
+        margin-left: 0%;
     }
 
     .product {
